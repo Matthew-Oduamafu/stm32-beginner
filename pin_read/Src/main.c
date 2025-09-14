@@ -25,6 +25,11 @@
 #define MASK(X) (1<<X)
 #define MASK_POS(BITS, POS) (BITS<<POS)
 
+//struct DataSet{
+//	int a;
+//	int b;
+//}__attribute__((packed));
+
 int main(void)
 {
 	// address to Clock register

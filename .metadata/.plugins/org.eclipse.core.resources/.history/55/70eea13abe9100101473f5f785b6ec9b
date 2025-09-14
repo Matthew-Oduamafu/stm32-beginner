@@ -1,0 +1,34 @@
+/*
+ * main.h
+ *
+ *  Created on: Sep 14, 2025
+ *      Author: matthewoduamafu
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+#define MASK(X) (1<<X)
+#define MASK_POS(BITS, POS) (BITS<<POS)
+
+typedef struct {
+	uint32_t gpioa_en : 1;
+	uint32_t gpiob_en : 1;
+	uint32_t gpioc_en : 1;
+	uint32_t gpiod_en : 1;
+	uint32_t gpioe_en : 1;
+	uint32_t gpiof_en : 1;
+	uint32_t gpiog_en : 1;
+	uint32_t gpioh_en : 1;
+	uint32_t gpioa_en : 1;
+} RCC_AHB1ENR_t;
+
+typedef struct{
+
+}GPIOx_MODER_t;
+
+typedef struct{
+
+}GPIOx_ODR_t;
+
+#endif /* MAIN_H_ */

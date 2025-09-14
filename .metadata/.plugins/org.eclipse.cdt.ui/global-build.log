@@ -1,24 +1,30 @@
-12:51:32 **** Build of configuration Debug for project pin_read ****
+23:32:30 **** Clean-only build of configuration Debug for project led_toggle_with_bitfields ****
+make -j9 clean 
+rm -rf ./Startup/startup_stm32f407vgtx.d ./Startup/startup_stm32f407vgtx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf default.size.stdout led_toggle_with_union.elf led_toggle_with_union.list led_toggle_with_union.map
+ 
+23:32:31 **** Build of configuration Debug for project led_toggle_with_bitfields ****
 make -j9 all 
 arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f407vgtx.d" -MT"Startup/startup_stm32f407vgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f407vgtx.o" "../Startup/startup_stm32f407vgtx.s"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
 arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "pin_read.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/matthewoduamafu/matthew/code/embedded-c/my_workspace/target/pin_read/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pin_read.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: pin_read.elf
+arm-none-eabi-gcc -o "led_toggle_with_bitfields.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/matthewoduamafu/matthew/code/embedded-c/my_workspace/target/led_toggle_with_union/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_toggle_with_bitfields.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: led_toggle_with_bitfields.elf
  
-arm-none-eabi-size  pin_read.elf 
-arm-none-eabi-objdump -h -S pin_read.elf  > "pin_read.list"
+arm-none-eabi-size  led_toggle_with_bitfields.elf 
+arm-none-eabi-objdump -h -S led_toggle_with_bitfields.elf  > "led_toggle_with_bitfields.list"
    text	   data	    bss	    dec	    hex	filename
-    768	      0	   1568	   2336	    920	pin_read.elf
+    760	      0	   1568	   2328	    918	led_toggle_with_bitfields.elf
 Finished building: default.size.stdout
  
-Finished building: pin_read.list
+Finished building: led_toggle_with_bitfields.list
  
-12:51:59 **** Incremental Build of configuration Debug for project pin_read ****
+23:33:08 **** Incremental Build of configuration Debug for project led_toggle_with_bitfields ****
 make -j9 all 
-arm-none-eabi-size  pin_read.elf 
+arm-none-eabi-size  led_toggle_with_bitfields.elf 
    text	   data	    bss	    dec	    hex	filename
-    768	      0	   1568	   2336	    920	pin_read.elf
+    760	      0	   1568	   2328	    918	led_toggle_with_bitfields.elf
 Finished building: default.size.stdout
  
