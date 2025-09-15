@@ -1,0 +1,10 @@
+01:50:23 **** Incremental Build of configuration Debug for project matrix_keyboard ****
+make -j9 all 
+arm-none-eabi-size  matrix_keyboard.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4220	     92	   1900	   6212	   1844	matrix_keyboard.elf
+Finished building: default.size.stdout
+ 
+
+01:50:23 Build Finished. 0 errors, 0 warnings. (took 269ms)
+
